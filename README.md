@@ -28,6 +28,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     $LineHeight: 1.2rem
     $FontFamily: Courier
     $Red: rgb(255, 15, 15)
+    $_fontSizes: (small: 14px, medium: 16px, large: 18px)
     
 ## Defaults
 
