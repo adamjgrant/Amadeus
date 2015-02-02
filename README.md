@@ -1,31 +1,25 @@
 # Amadeus
 ## CSS Variable Conventions
 
-Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to keep CSS variable syntax organized and intuitive.
+Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to keep your CSS variables organized and intuitive.
 
-This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor.
+This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
 
 # Syntax in a nutshell
 
-    $[class/Default/_name]-[property]_[variation]: value
+    $[property]--[block]-[category/Element]_[variation]: value
+    $[Default]: value
+    $[_name]: value
     
 - `$`
-  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`
-- `class/Default/_name`
-  - The thing or `class` of thing this will describe
-  - `Default` (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
-  - `_name` is for CSS values that don't map directly to actual properties or values.
-- `property`
-  - The property of the thing
-  - CSS properties are encouraged, `camelCased` instead of hyphenated.
-- `variation`
-  - A helper to describe variations of the property. 
+  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use
     
 ## Examples
 
-    $type-headingSize_sm: 1.5rem
-    $footer-paddingTop: 25px
-    $type-headingFont: Helvetica
+    $fontSize--heading_sm: 1.5rem
+    $paddingTop--Footer: 25px
+    $paddingTop--breakingNews-Footer: 50px
+    $fontFamily--headings: Helvetica
     $LineHeight: 1.2rem
     $FontFamily: Courier
     $Red: rgb(255, 15, 15)
@@ -54,7 +48,7 @@ or
     
 Instead, this should be denoted with a class like
 
-    $heading-lineHeight_sm // Good
+    $lineHeight--heading_sm // Good
     
 The next section will explain how to do this in depth.
 
