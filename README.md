@@ -84,7 +84,7 @@ Sometimes, a `variation` is needed to tailor these properties to custom classifi
 
 In modern CSS preprocessors, variables can be used for values that do not immediately translate to CSS values. In this case, variables should announce their special traits with a leading `_`.
 
-For example maps:
+For example, Sass maps:
 
     $[_name]: value
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
