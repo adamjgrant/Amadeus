@@ -31,6 +31,10 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     $Red: rgb(255, 15, 15)
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
     
+# How to write a variable
+
+1. Determine whether the variable describes a [default](#defaults), [class property](#class-property), or [non-css value](#non-css-values).
+
 ## Defaults
 
 Single chunk names are reserved for HTML defaults. So these do not come after a class, like `$type-headingFont` because they are the defaults *for the CSS property or value itself.*. They should also begin with an uppercase letter to establish this distinction.
@@ -54,9 +58,9 @@ Instead, this should be denoted with a class like
     
 The next section will explain how to do this in depth.
 
-## Extended syntax
+## Class property
 
-The extended syntax has at least a block and a property. Names extend left to right, only adding a chunk if needed.
+Class properties, have at least a block and a property. Names extend left to right, only adding a chunk if needed.
 
     $[class]-[property]: value
     $footer-paddingTop: 25px
