@@ -7,15 +7,76 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 # Syntax in a nutshell
 
-    $[block/Base]-[prop]_[variation]
+    $[class/Default]-[property]_[variation]: value
+    
+- `class/Default`
+  - The thing this will describe
+  - "Base" (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
+- `property`
+  - The property of the thing
+  - CSS properties are encouraged, `camelCased` instead of hyphenated.
+- `variation`
+  - A helper to describe variations of the property. 
     
 ## Examples
 
-    $Red: rgb(255, 15, 15)
-    $heading-sm
-    $footerPaddingTop
-    $FontFamily: Courier
+    $type-headingSize_sm: 1.5rem
+    $footer-paddingTop: 25px
+    $type-headingFont: Helvetica
     $LineHeight: 1.2rem
+    $FontFamily: Courier
+    $Red: rgb(255, 15, 15)
+    
+## Defaults
+
+Single chunk names are reserved for HTML defaults. So these do not come after a class, like `$type-headingFont` because they are the defaults *for the CSS property or value itself.*. They should also begin with an uppercase letter to establish this distinction.
+
+    $[Default]: value
+    $LineHeight: 1.2rem    // CSS property
+    $FontFamily: Courier   // CSS property
+    $Red: rgb(255, 15, 15) // CSS value
+    
+To keep these special, never append a `property` or `variation` to a default like
+
+    $LineHeight-heading // Bad
+    
+or
+    
+    $LineHeight-heading_sm // Bad
+    
+Instead, this should be denoted with a class like
+
+    $type-heading_sm // Good
+    
+The next section will explain how to do this in depth.
+
+## Extended syntax
+
+The extended syntax has at least a block and a property. Names extend left to right, only adding a chunk if needed.
+
+    $[class]-[property]: value
+    $footer-paddingTop: 25px
+    $type-headingFont: Helvetica
+    
+Again, properties are usually CSS properties, in which case, hyphen syntax (`do-re-mi`) should be converted to camel case (`doReMi`)
+
+Sometimes, a `variation` is needed to tailor these properties to custom classifications of your app's design.
+
+    $[class]-[property]_[variation]: value    
+    $type-headingSize_sm: 1.5rem
+    $type-headingSize_rg: 1.7rem
+    
+# Non-CSS values
+
+In modern CSS preprocessors, variables can be used for values that do not immediately translate to CSS values. For example maps:
+
+    $_fontSizes: (small: 14px, medium: 16px, large: 18px)
+    
+or custom reusable pieces of your CSS's mixins:
+
+    $_scalingFactor: 1.2
+    
+In this case, variables should announce their special traits with a leading `_`.
 
 # Variable categories
 
