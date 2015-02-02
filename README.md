@@ -7,13 +7,14 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 # Syntax in a nutshell
 
-    $[class/Default]-[property]_[variation]: value
+    $[class/Default/_name]-[property]_[variation]: value
     
 - `$`
   - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`
-- `class/Default`
-  - The thing this will describe
-  - "Base" (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
+- `class/Default/_name`
+  - The thing or `class` of thing this will describe
+  - `Default` (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
+  - `_name` is for CSS values that don't map directly to actual properties or values.
 - `property`
   - The property of the thing
   - CSS properties are encouraged, `camelCased` instead of hyphenated.
@@ -71,15 +72,17 @@ Sometimes, a `variation` is needed to tailor these properties to custom classifi
     
 # Non-CSS values
 
-In modern CSS preprocessors, variables can be used for values that do not immediately translate to CSS values. For example maps:
+In modern CSS preprocessors, variables can be used for values that do not immediately translate to CSS values. In this case, variables should announce their special traits with a leading `_`.
 
+For example maps:
+
+    $[_name]: value
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
     
 or custom reusable pieces of your CSS's mixins:
 
+    $[_name]: value
     $_scalingFactor: 1.2
-    
-In this case, variables should announce their special traits with a leading `_`.
 
 # Variable categories
 
