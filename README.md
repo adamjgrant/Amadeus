@@ -33,7 +33,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     
 # How to write a variable
 
-1. Determine whether the variable describes a [default](#defaults), [class property](#class-property), or [non-css value](#non-css-values).
+Determine whether your variable describes a [default](#defaults), [class property](#class-property), or [non-css value](#non-css-values).
 
 ## Defaults
 
