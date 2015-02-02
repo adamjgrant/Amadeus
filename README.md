@@ -1,7 +1,7 @@
 # Amadeus
 ## CSS Variable Conventions
 
-Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Keeping CSS variables logical and well-organized can quickly become unwieldly. Amadeus is a set of conventions to keep syntax organized and intuitive.
+Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to keep CSS variable syntax organized and intuitive.
 
 This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor.
 
@@ -10,7 +10,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     $[class/Default]-[property]_[variation]: value
     
 - `$`
-  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`
+  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`
 - `class/Default`
   - The thing this will describe
   - "Base" (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
