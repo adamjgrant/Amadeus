@@ -7,15 +7,19 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 # Syntax in a nutshell
 
-    $[foo][Bar]-[fizz]_[buzz]
+    $[block/Base]-[prop]_[variation]
+    
+## Examples
 
-# Varaible categories
+    $Red: rgb(255, 15, 15)
+    $heading-sm
+    $footerPaddingTop
+    $FontFamily: Courier
+    $LineHeight: 1.2rem
 
-Amadeus recognizes that CSS variables can fall into one of 4 categories:
+# Variable categories
 
-## Naming
-
-    $font-nm: "Gotham"
+Amadeus recognizes that CSS variables can fall into one of 3 categories:
 
 ## Sizing
 
@@ -28,3 +32,17 @@ Amadeus recognizes that CSS variables can fall into one of 4 categories:
 ## Logic
 
     $query-lg: "only screen and (min-width: 400px)"
+    
+# Object of variable
+
+A variable exists to define some object of the application's styling. This object can be one of the following:
+
+## Base
+
+Base styles are fundamental to the style or palette of the application, as opposed to the styling of block elements.
+
+    $red: (216, 15, 15);
+
+## Block
+
+Blocks can either be discrete HTML elements like `<footer>` or classes of elements like headings (`<h1>, <h2>...<h6>`)
