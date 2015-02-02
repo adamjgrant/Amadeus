@@ -54,7 +54,7 @@ or
     
 Instead, this should be denoted with a class like
 
-    $type-heading_sm // Good
+    $heading-lineHeight_sm // Good
     
 The next section will explain how to do this in depth.
 
