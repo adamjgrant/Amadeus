@@ -9,6 +9,8 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
     $[class/Default]-[property]_[variation]: value
     
+- $
+  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`
 - `class/Default`
   - The thing this will describe
   - "Base" (purposely uppercased) is a special circumstance where a CSS property or value itself is being set as a default.
