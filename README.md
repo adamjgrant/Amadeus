@@ -5,21 +5,33 @@ Conceived as a convention for future versions of [Kickstart](http://getkickstart
 
 This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
 
-# Syntax in a nutshell
+# Syntax
 
-    $[property]--[block]-[category/Element]_[variation]: value
+    $[block]-[Tag]_[variation]--[property]: value
     $[Default]: value
     $[_name]: value
     
 - `$`
-  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use
+  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`.
+- `property`
+  - Required. Native CSS properties only, camel cased (`doReMi`) not hyphenated (`do-re-mi`). If the variable does not describe a CSS property use the `Default` or `_name` syntax instead.
+- `block`
+  - Optional block to scope the variable. This should never refer to a native HTML element.
+- `Tag`
+  - Optional HTML tag this variable will style. Uppercased for readability and consistency with `Default` syntax.
+- `variation`
+  - Optional suffix for variations on the same variable name.
+- `Default`
+  - A default variable that should have no relevance to the structure of the app itself. Should map directly to a CSS value or property in the global scope.
+- `_name`
+  - Reserved for variables that do not pipe directly into CSS values. [Sass maps](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps) are an example of such a variable.
     
 ## Examples
 
-    $fontSize--heading_sm: 1.5rem
-    $paddingTop--Footer: 25px
-    $paddingTop--breakingNews-Footer: 50px
-    $fontFamily--headings: Helvetica
+    $heading_sm--fontSize: 1.5rem
+    $Footer--paddingTop: 25px
+    $breakingNews-Footer--paddingTop: 50px
+    $headings--fontFamily: Helvetica
     $LineHeight: 1.2rem
     $FontFamily: Courier
     $Red: rgb(255, 15, 15)
@@ -27,7 +39,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     
 # How to write a variable
 
-Determine whether your variable describes a [default](#defaults), [class property](#class-property), or [non-css value](#non-css-values).
+Determine whether your variable describes a [default](#defaults), [general CSS property](#class-property), or [non-css value](#non-css-values).
 
 ## Defaults
 
