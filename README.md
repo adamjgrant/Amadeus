@@ -5,7 +5,7 @@ Conceived as a convention for future versions of [Kickstart](http://getkickstart
 
 Inspired by recommendations from [CSS Tricks](http://css-tricks.com/strategies-keeping-css-specificity-low/?utm_content=bufferdc5e1&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer).
 
-This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
+This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. This is also designed to integrate nicely into a future [native CSS variable](http://www.w3.org/TR/css-variables-1/) syntax. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
 
 # Syntax
 
