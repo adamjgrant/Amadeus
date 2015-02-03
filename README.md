@@ -1,7 +1,7 @@
 # Amadeus
 ## CSS Variable Conventions
 
-Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to keep your CSS variables organized and intuitive. These are not conventions for CSS *classes* however.
+Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to **keep your CSS variables organized and intuitive**. These are not conventions for CSS *classes* however.
 
 Inspired by recommendations from [CSS Tricks](http://css-tricks.com/strategies-keeping-css-specificity-low/?utm_content=bufferdc5e1&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer).
 
