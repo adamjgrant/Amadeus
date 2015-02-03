@@ -7,8 +7,13 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 # Syntax
 
+    // App properties
     $[block]-[Tag]_[variation]--[property]: value
+    
+    // Default properties
     $[Default]: value
+    
+    // Non-CSS properties
     $[_name]: value
     
 - `$`
