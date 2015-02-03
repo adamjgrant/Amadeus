@@ -9,14 +9,17 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 # Syntax
 
-    // App properties
-    $[block]-[Tag]_[variation]--[property]: value
+    // General syntax
+    $[name]--[property]: value
     
-    // Default properties
-    $[Default]: value
+    // Default CSS properties, values, or HTML tag
+    FOO
     
-    // Non-CSS properties
-    $[_name]: value
+    // Refers to a custom module
+    -foo
+    
+    // Non-CSS names
+    _foo
     
 - `$`
   - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`.
