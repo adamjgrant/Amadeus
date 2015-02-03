@@ -34,7 +34,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     $RED: rgb(255, 15, 15)
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
 
-## Default CSS Properties, Values and HTML Tags
+# Default CSS Properties, Values and HTML Tags
 
 This syntax is used exclusively for names that are native to CSS and HTML. When used on their own, they should be uppercase:
 
@@ -57,7 +57,7 @@ Use a `--camelCase` syntax when using as a suffix. This example uses both versio
     $[fizzFOO--bar]: value // custom module + HTML Tag + CSS property
     $newsHeadingARTICLE--fontSize: 25px    
 
-## Custom modules
+# Custom modules
 
 Custom modules are named components in your application like "User menu," "News Bar," "Call to Action Button," etc. They don't describe a style and are not native to the HTML/CSS API. These should also always be followed by the css property they are defining.
 
