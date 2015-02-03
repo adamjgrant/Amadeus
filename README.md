@@ -12,75 +12,66 @@ This documentation uses the Sass syntax, however these conventions are compatibl
     // General syntax
     $[name]--[property]: value
     
+## Name syntax
+    
     // Default CSS properties, values, or HTML tag
-    FOO
+    FOOBAR or --fooBar
     
     // Refers to a custom module
-    -foo
+    fooBar
     
-    // Non-CSS names
-    _foo
-    
-- `$`
-  - The preprocessor's variable prefix. For example, Sass and Scss use `$`, Less uses `@`, future native CSS variables may use `--`.
-- `property`
-  - Required. Native CSS properties only, camel cased (`doReMi`) not hyphenated (`do-re-mi`). If the variable does not describe a CSS property use the `Default` or `_name` syntax instead.
-- `block`
-  - Optional block to scope the variable. This should never refer to a native HTML element.
-- `Tag`
-  - Optional HTML tag this variable will style. Uppercased for readability and consistency with `Default` syntax.
-- `variation`
-  - Optional suffix for variations on the same variable name.
-- `Default`
-  - A default variable that should have no relevance to the structure of the app itself. Should map directly to a CSS value or property in the global scope.
-- `_name`
-  - Reserved for variables that do not pipe directly into CSS values. [Sass maps](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps) are an example of such a variable.
+    // Variations and Utilities
+    _fooBar
     
 ## Examples
 
     $heading_sm--fontSize: 1.5rem
-    $Footer--paddingTop: 25px
-    $breakingNews-Footer--paddingTop: 50px
+    $FOOTER--paddingTop: 25px
+    $breakingNewsFOOTER--paddingTop: 50px
     $headings--fontFamily: Helvetica
-    $LineHeight: 1.2rem
-    $FontFamily: Courier
-    $Red: rgb(255, 15, 15)
+    $LINEHEIGHT: 1.2rem
+    $FONTFAMILY: Courier
+    $RED: rgb(255, 15, 15)
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
-    
-# How to write a variable
 
-Determine whether your variable describes a [css default](#css-defaults), [property of your app](#app-properties), or [non-css value](#non-css-values).
+## Default CSS Properties, Values and HTML Tags
 
-## CSS Defaults
+This syntax is used exclusively for names that are native to CSS and HTML. When used on their own, they should be uppercase:
 
-Single chunk names are reserved for HTML defaults. So these do not come after a class, like `$heading--fontSize` because they are the defaults *for the CSS property or value itself.*. They should also begin with an uppercase letter to establish this distinction.
-
-    $[Default]: value
-    $LineHeight: 1.2rem    // CSS property
-    $FontFamily: Courier   // CSS property
-    $Red: rgb(255, 15, 15) // CSS value
+    $[FOO]: value // CSS value or property
+    $LINEHEIGHT: 1.2rem
+    $FONTFAMILY: Courier
+    $RED: rgb(255, 15, 15)
     
 Use a `variation` if and only if the variable still directly describes a CSS value
 
-    $Red: rgb(255, 15, 15)         // CSS value
-    $Red_muted: rgb(245, 157, 157) // CSS value
-    $Red_dark: rgb(92, 24, 24)     // CSS value
-
-## App Properties
-
-App properties are distinct from defaults in that they describe parts of the structure of your application.
-
-    $[block]-[Tag]_[variation]--[property]: value
-    $Footer--paddingTop: 25px
-    $heading--fontFamily: Helvetica
+    $[FOO]: value // CSS value or property
+    $RED: rgb(255, 15, 15)         
     
-Again, properties are usually CSS properties, in which case, hyphen syntax (`do-re-mi`) should be converted to camel case (`doReMi`)
+    $[FOO_bar]: value // CSS value + variation
+    $RED_muted: rgb(245, 157, 157)
+    $RED_dark: rgb(92, 24, 24)     
 
-Sometimes, a `variation` is needed to tailor these properties to custom classifications of your app's design.
+Use a `--camelCase` syntax when using as a suffix. This example uses both versions:
 
-    $[class]-[property]_[variation]: value    
-    $heading_sm--fontSize: 1.5rem
-    $heading_rg--fontSize: 1.7rem
+    $[fizzFOO--bar]: value // custom module + HTML Tag + CSS property
+    $newsHeadingARTICLE--fontSize: 25px    
+
+## Custom modules
+
+Custom modules are named components in your application like "User menu," "News Bar," "Call to Action Button," etc. They don't describe a style and are not native to the HTML/CSS API. These should also always be followed by the css property they are defining.
+
+    $[foo--bar]: value // custom module + CSS property
+    $userMenu--padding: 50px
+    $newsBar--marginBottom: 25px
+    $cTA--backgroundColor: $RED
+    
+You can also add the variation syntax to create multiple versions of the same thing.
+
+    $[foo_fizz--bar]: value // custom module + variation
+    $heading_lg--fontSize: 20px
+    $heading_md--fontSize: 15px
+    $heading_sm--fontSize: 12px
     
 # Non-CSS values
 
@@ -88,32 +79,47 @@ In modern CSS preprocessors, variables can be used for values that do not immedi
 
 For example, Sass maps:
 
-    $[_name]: value
-    $_fontSizes: (small: 14px, medium: 16px, large: 18px)
+    $[_foo]: value
+    $_heading: (fontSize: 24px, lineHeight: 26px)
     
 or custom reusable pieces of your CSS's mixins:
 
-    $[_name]: value
+    $[_foo]: value
     $_scalingFactor: 1.2
+    
+Use this syntax twice, both to denote a non css value and to create a group of variations.
+
+    $[_foo_bar]: value
+    $_heading_lg: (fontSize: 24px, lineHeight: 26px)
+    $_heading_md: (fontSize: 18px, lineHeight: 20px)
+    $_heading_sm: (fontSize: 14px, lineHeight: 15px)
+    
+    $_query_lg: "only screen and (min-width: 400px)"
+    $_query_md: "only screen and (min-width: 650px)"
+    $_query_lg: "only screen and (min-width: 800px)"
 
 # Grouping
 
+Here are some helpful guidelines on how to group your variables in a variables.sass (or whatever extension you use) file.
+
 ## Defaults
 
-    $Red: rgb(255, 15, 15)
+    $RED: rgb(255, 15, 15)
 
 ## Sizing
 
-    $Footer--marginTop: 25px
+    $FOOTER--marginTop: 25px
     
 ## Color
 
-    $link--color: rgb(50, 25, 30)
+    $A--color: rgb(50, 25, 30)
     
 ## Logic
 
-    $_query-lg: "only screen and (min-width: 400px)"
+    $_query_lg: "only screen and (min-width: 400px)"
     
 # TODO
 
 - Some CSS properties don't actually exist although used as if they do. An example would be describing the top and bottom margin but not left and right.
+  - Margin top/bottom
+  - Background shorthand syntax
