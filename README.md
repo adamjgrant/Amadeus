@@ -57,19 +57,11 @@ Single chunk names are reserved for HTML defaults. So these do not come after a 
     $FontFamily: Courier   // CSS property
     $Red: rgb(255, 15, 15) // CSS value
     
-To keep these special, never append a `block` or `variation` to a default like
+Use a `variation` if and only if the variable still directly describes a CSS value
 
-    $LineHeight-heading // Bad
-    
-or
-    
-    $LineHeight-heading_sm // Bad
-    
-Instead, this should be denoted with a class like
-
-    $heading_sm--lineHeight // Good
-    
-The next section will explain how to do this in depth.
+    $Red: rgb(255, 15, 15)         // CSS value
+    $Red_muted: rgb(245, 157, 157) // CSS value
+    $Red_dark: rgb(92, 24, 24)     // CSS value
 
 ## App Properties
 
