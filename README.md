@@ -1,6 +1,5 @@
-Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions
-
 # Amadeus
+Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions
 ## CSS Variable Conventions
 
 Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to **keep your CSS variables organized and intuitive**. These are not conventions for CSS *classes* however.
