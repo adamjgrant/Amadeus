@@ -1,4 +1,4 @@
-Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS variable conventions
+Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions
 
 # Amadeus
 ## CSS Variable Conventions
