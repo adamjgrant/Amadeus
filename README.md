@@ -1,3 +1,5 @@
+Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS variable conventions
+
 # Amadeus
 ## CSS Variable Conventions
 
