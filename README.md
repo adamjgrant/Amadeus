@@ -9,6 +9,44 @@ Inspired by recommendations from [CSS Tricks](http://css-tricks.com/strategies-k
 
 This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. This is also designed to integrate nicely into a future [native CSS variable](http://www.w3.org/TR/css-variables-1/) syntax. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
 
+# How it works
+
+Let's star with some easy stuff. Let's set a red color that is closer to our site's branding than default red.
+
+    $RED: rgb(248, 240, 255)
+    
+Hang on, we actually have a few different shades of red, let's add a modifier
+
+    $RED_light: rgb(245, 129, 129)
+    $RED:       rgb(234, 40, 40)
+    $RED_dark:  rgb(194, 21, 21)
+
+Now we want to set a font size for the `<button>` element. The button tag is native to HTML and font-size is not only native but an actual CSS property, so just like `$RED`, we write it like this:
+
+    $BUTTON--fontSize: 16px
+    
+That looks good, but what about the font color of our news feed? News feed isn't a native element, so we just omit the uppercasing
+
+    $newsFeed--color: $RED_light
+    
+Wait, we have both a breaking news and local news section. No problem. Modifier to the rescue.
+
+    $newsFeed_breaking--color: $RED_light
+    $newsFeed_local--color: $RED_light
+    
+I want to set some `@media` queries, and it would be nice to set a breakpoint once and use it everywhere.
+
+    @media only screen and (min-width: 650px)
+    
+But this is more of a utility, it does't get placed after a `:` in CSS. So we use the utility syntax:
+
+    $_query: "only screen and (min-width: 650px)"
+    
+Of course, we'll probably have multiple of thesse so we use modifiers again.
+
+    $_query_md: "only screen and (min-width: 650px)"
+    $_query_lg: "only screen and (min-width: 800px)"
+
 # Syntax
 
     // General syntax
