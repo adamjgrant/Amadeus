@@ -1,5 +1,5 @@
 # Amadeus
-*Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions*
+*Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions and [Debussy](https://github.com/ajkochanowicz/Debussy) for CSS formatting*
 
 ## CSS Variable Conventions
 
