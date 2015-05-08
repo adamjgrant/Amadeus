@@ -26,6 +26,8 @@
       - [Controller/Action](#controlleraction)
       - [Component](#component)
       - [Element](#element)
+  - [Formatting](#formatting)
+    - [Example](#example)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
