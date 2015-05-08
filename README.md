@@ -24,6 +24,7 @@
     - [What does it do?](#what-does-it-do)
     - [How to use](#how-to-use)
       - [Controller/Action](#controlleraction)
+      - [Blocks](#blocks)
       - [Component](#component)
       - [Element](#element)
   - [Formatting](#formatting)
@@ -273,6 +274,7 @@ The user should strive to write very simplistic, one or two word classes like
 This is made possible by namespacing with the following properties:
 
   - controller/action (optional)
+  - block (optional)
   - component
   - element 
 
@@ -299,7 +301,31 @@ Of course, you shouldn't have to write your CSS page by page, so this is an opti
 These selectors target the `data-[property]` attribute on HTML elements
 
     <body data-controller="products" data-action="show">
-        
+
+#### Blocks
+
+![Product index](http://cdn.everything.io/chopin/products_index.png)
+
+    [data-block="products"] {
+      margin: 0px auto;
+      display: block;
+    }
+
+    [data-component="product"] {
+      background-color: violet;
+    }
+
+<span>
+
+    <div data-block="products">
+      <div data-component="product">...</div>
+      <div data-component="product">...</div>
+      <div data-component="product">...</div>
+      ...
+    </div>
+
+Blocks describe visually large areas of the application that contain many components.
+
 #### Component
 
 ![Product index](http://cdn.everything.io/chopin/products_index.png)
