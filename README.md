@@ -44,7 +44,7 @@
 # Amadeus
 Keep your CSS tidy and your team all on the same page. Amadeus is a set of **CSS Conventions** for naming **variables** and **selectors** and **formatting nested CSS**.
 
-## Variables
+# Variables
 
 Conceived as a convention for future versions of [Kickstart](http://getkickstart.com), Amadeus is a set of conventions to **keep your CSS variables organized and intuitive**. These are not conventions for CSS *classes* however.
 
@@ -52,7 +52,7 @@ Inspired by recommendations from [CSS Tricks](http://css-tricks.com/strategies-k
 
 This documentation uses the Sass syntax, however these conventions are compatible with any CSS pre-processor. This is also designed to integrate nicely into a future [native CSS variable](http://www.w3.org/TR/css-variables-1/) syntax. Love it or hate it, you can do something about it! Start a discussion in the Issues and let's evolve these conventions together.
 
-### How it works
+## How it works
 
 Let's star with some easy stuff. Let's set a red color that is closer to our site's branding than default red.
 
@@ -90,12 +90,12 @@ Of course, we'll probably have multiple of thesse so we use modifiers again.
     $_query_md: "only screen and (min-width: 650px)"
     $_query_lg: "only screen and (min-width: 800px)"
 
-### Syntax
+## Syntax
 
     // General syntax
     $[name]--[property]: value
     
-#### Name syntax
+### Name syntax
     
     // Default CSS properties, values, or HTML tag
     FOOBAR or --fooBar
@@ -106,7 +106,7 @@ Of course, we'll probably have multiple of thesse so we use modifiers again.
     // Variations and Utilities
     _fooBar
     
-#### Examples
+### Examples
 
     $heading_sm--fontSize: 1.5rem
     $FOOTER--paddingTop: 25px
@@ -117,7 +117,7 @@ Of course, we'll probably have multiple of thesse so we use modifiers again.
     $RED: rgb(255, 15, 15)
     $_fontSizes: (small: 14px, medium: 16px, large: 18px)
 
-### Default CSS Properties, Values and HTML Tags
+## Default CSS Properties, Values and HTML Tags
 
 This syntax is used exclusively for names that are native to CSS and HTML. When used on their own, they should be uppercase:
 
@@ -140,7 +140,7 @@ Use a `--camelCase` syntax when using as a suffix. This example uses both versio
     $[fizzFOO--bar]: value // custom module + HTML Tag + CSS property
     $newsHeadingARTICLE--fontSize: 25px    
 
-### Custom modules
+## Custom modules
 
 Custom modules are named components in your application like "User menu," "News Bar," "Call to Action Button," etc. They don't describe a style and are not native to the HTML/CSS API. These should also always be followed by the css property they are defining.
 
@@ -156,7 +156,7 @@ You can also add the variation syntax to create multiple versions of the same th
     $heading_md--fontSize: 15px
     $heading_sm--fontSize: 12px
     
-### Non-CSS values
+## Non-CSS values
 
 In modern CSS preprocessors, variables can be used for values that do not immediately translate to CSS values. In this case, variables should announce their special traits with a leading `_`.
 
@@ -181,28 +181,28 @@ Use this syntax twice, both to denote a non css value and to create a group of v
     $_query_md: "only screen and (min-width: 650px)"
     $_query_lg: "only screen and (min-width: 800px)"
 
-### Grouping
+## Grouping
 
 Here are some helpful guidelines on how to group your variables 
 in a variables.sass (or whatever extension you use) file.
 
-#### Defaults
+### Defaults
 
     $RED: rgb(255, 15, 15)
 
-#### Sizing
+### Sizing
 
     $FOOTER--marginTop: 25px
     
-#### Color
+### Color
 
     $A--color: rgb(50, 25, 30)
     
-#### Logic
+### Logic
 
     $_query_lg: "only screen and (min-width: 400px)"
 
-### Duplicate properties
+## Duplicate properties
 
 Often, you'll need to define properties that inherently apply to two different 
 CSS attributes.
@@ -212,7 +212,7 @@ CSS attributes.
       height: 50px
     }
 
-#### Separate properties
+### Separate properties
 
 For this, we use the same `--` prefix to indicate a real css property and 
 simply concatenate the other with another `--`.
@@ -224,7 +224,7 @@ simply concatenate the other with another `--`.
       height: $square--width--height;
     }
 
-#### Properties with identical prefixes
+### Properties with identical prefixes
 
 Other properties only differ by their directionality suffix like `padding-top` and
 `padding-bottom`. Conveniently, these are both individual properties for another real
@@ -258,7 +258,7 @@ Our variables then become:
       padding: $rectangle--padding_0 $rectangle--padding_1;
     }
     
-## Selectors
+# Selectors
 
 Amadeus selectors seek to replace BEM to empower preprocessors and cleaner HTML.
 
@@ -269,11 +269,11 @@ In this world, CSS preprocessors were not nearly as powerful or widely implement
 
 This is not just about CSS classes, but CSS selectors in general. It is designed for use with robust backend frameworks and DOM-building JavaScript libraries like **React**
 
-### What does it do?
+## What does it do?
 
 Amadeus provides a convention for **succinct**, **namespaced**, **componentized** CSS classes. 
 
-### How to use
+## How to use
 
 The user should strive to write very simplistic, one or two word classes like
 
@@ -285,7 +285,7 @@ This is made possible by namespacing with the following properties:
   - block (optional)
   - component
 
-#### Controller/Action
+### Controller/Action
 
 ![Home view](http://cdn.everything.io/chopin/home.png)
 
@@ -309,7 +309,7 @@ These selectors target the `data-[property]` attribute on HTML elements
 
     <body data-controller="products" data-action="show">
 
-#### Blocks
+### Blocks
 
 ![Product index](http://cdn.everything.io/chopin/products_index.png)
 
@@ -333,7 +333,7 @@ These selectors target the `data-[property]` attribute on HTML elements
 
 Blocks describe visually large areas of the application that contain many components.
 
-#### Component
+### Component
 
 ![Product index](http://cdn.everything.io/chopin/products_index.png)
 
@@ -355,7 +355,7 @@ Examples: Slideshows, sidebars, message window, anything that is not a whole pag
       // Applies to all product thumbnail components.
     }
     
-#### Element
+### Element
 
 ![Product page](http://cdn.everything.io/chopin/products_show.png)
 ![Product index](http://cdn.everything.io/chopin/products_index.png)
@@ -390,11 +390,11 @@ Elements should be well-namespaced and simplistic
       // Not recommended. Applies to all title classes.
     }
     
-## Formatting
+# Formatting
 
 Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maintainable.
 
-### Example
+## Example
 
     selector1,
     selector2 {
@@ -436,7 +436,7 @@ Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maint
       second-attribute: second-property;
     }
 
-### Nesting rules
+## Nesting rules
 
 Attributes should always stay together, without carriage returns until a new selector appears
 
@@ -463,7 +463,7 @@ selector but after scoped variables without continuing below a subselector
       margin: 0px auto;
     }
 
-### Multiple selectors
+## Multiple selectors
 
 Each selector of a single set of rules should appear on its own line.
 
@@ -475,7 +475,7 @@ Each selector of a single set of rules should appear on its own line.
 
 The last selector begins the first bracket of the rule set.
 
-### Ordering
+## Ordering
 
 Inside the brackets, declarations should appear as such:
 
@@ -513,27 +513,27 @@ Because `display: block` is last. However, if we add another group,
 
 `display:block` gets a carriage return, but not `&:before`.
 
-#### Scoped variables
+### Scoped variables
 
 Are variables that can only be read within this ruleset.
 
-#### Regular attributes
+### Regular attributes
 
 Are simply css attributes for the selector like
 
     display: block;
 
-#### Subselectors
+### Subselectors
 
 Are child selectors for the current selector. This does not include `&`-appended selectors
 as these are not children (or in the case of pseudo elements) do not describe an independent
 element.
 
-#### Appended selectors
+### Appended selectors
 
 Are either child selectors or pseudo elements like `::before`.
 
-#### Media queries
+### Media queries
 
 Are media queries for the current selector.
 
