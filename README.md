@@ -355,6 +355,49 @@ Elements should be well-namespaced and simplistic
       // Not recommended. Applies to all title classes.
     }
     
+## Formatting
+
+Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maintainable.
+
+### Example
+
+    selector1,
+    selector2 {
+      first-attribute: first-property;
+      second-attribute: second-property;
+      
+      subselector1,
+      subselector2, {
+        first-attribute: first-property;
+        second-attribute: second-property;
+      }
+      
+      &:appended-selector1,
+      &:appended-selector2 {
+        first-attribute: first-property;
+        second-attribute: second-property;
+      }
+      
+      @media screen and (min-width: 100px) {
+        /* Media query for selector1, selector2 */
+      }
+      
+      @media screen and (min-width: 200px) {
+        /* Media query for selector1, selector2 */
+        /* This goes below because the screen is bigger. */
+      }
+    }
+    
+    selector1 { /* Selector 1 only rules */
+      first-attribute: first-property;
+      second-attribute: second-property;
+    }
+    
+    selector2 { /* Selector 2 only rules */      
+      first-attribute: first-property;
+      second-attribute: second-property;
+    }
+    
 # Credits
 
 [@coreyti](https://github.com/coreyti) for his work on [Emerson](https://github.com/GetEmerson/emerson-rb). The data-attribute selection strategy of the selectors is heavily based on his work.
