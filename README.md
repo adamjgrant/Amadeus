@@ -17,8 +17,8 @@
       - [Color](#color)
       - [Logic](#logic)
     - [Duplicate properties](#duplicate-properties)
-    - [Separate properties](#separate-properties)
-    - [Properties with identical prefixes](#properties-with-identical-prefixes)
+      - [Separate properties](#separate-properties)
+      - [Properties with identical prefixes](#properties-with-identical-prefixes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
