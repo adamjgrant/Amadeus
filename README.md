@@ -333,7 +333,7 @@ Examples: Slideshows, sidebars, message window, anything that is not a whole pag
 
 Elements can be HTML elements or just very small sets of elements that don't qualify in one's mental model as a "component" ([I know it when I see It](http://en.wikipedia.org/wiki/I_know_it_when_I_see_it))
 
-Element naming is stupidly simple, as it should be. Chopin's element naming leads to smaller, more readable HTML and more manageable, modular CSS.
+Element naming is stupidly simple, as it should be. Amadeus's element naming leads to smaller, more readable HTML and more manageable, modular CSS.
 
 Elements should be well-namespaced and simplistic
 
