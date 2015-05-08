@@ -429,3 +429,4 @@ Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maint
 # Credits
 
 [@coreyti](https://github.com/coreyti) for his work on [Emerson](https://github.com/GetEmerson/emerson-rb). The data-attribute selection strategy of the selectors is heavily based on his work.
+[@pixeljanitor](https://github.com/pixeljanitor) for his guidance on good formatting for CSS.
