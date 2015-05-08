@@ -1,3 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Amadeus](#amadeus)
+  - [CSS Variable Conventions](#css-variable-conventions)
+- [How it works](#how-it-works)
+- [Syntax](#syntax)
+  - [Name syntax](#name-syntax)
+  - [Examples](#examples)
+- [Default CSS Properties, Values and HTML Tags](#default-css-properties-values-and-html-tags)
+- [Custom modules](#custom-modules)
+- [Non-CSS values](#non-css-values)
+- [Grouping](#grouping)
+  - [Defaults](#defaults)
+  - [Sizing](#sizing)
+  - [Color](#color)
+  - [Logic](#logic)
+- [TODO](#todo)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Amadeus
 *Also see [Chopin](https://github.com/ajkochanowicz/Chopin) CSS class name conventions and [Debussy](https://github.com/ajkochanowicz/Debussy) for CSS formatting*
 
