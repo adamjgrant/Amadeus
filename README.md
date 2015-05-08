@@ -276,7 +276,6 @@ This is made possible by namespacing with the following properties:
   - controller/action (optional)
   - block (optional)
   - component
-  - element 
 
 #### Controller/Action
 
@@ -391,11 +390,14 @@ Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maint
 
     selector1,
     selector2 {
+      $someVariable: 3;
+
       first-attribute: first-property;
       second-attribute: second-property;
+      third-attribute: $someVariable;
       
       subselector1,
-      subselector2, {
+      subselector2 {
         first-attribute: first-property;
         second-attribute: second-property;
       }
@@ -425,7 +427,108 @@ Standards for keeping nested CSS/SCSS/Sass, etc. readable, consistent, and maint
       first-attribute: first-property;
       second-attribute: second-property;
     }
-    
+
+### Nesting rules
+
+Attributes should always stay together, without carriage returns until a new selector appears
+
+    p {
+      display: block;
+      margin: 0px auto;
+
+      a {
+        color: blue;
+      }
+    }
+
+Attributes are **hoisted** to their selector. They should always appear directly after the
+selector but after scoped variables without continuing below a subselector
+
+    p {
+      display: block;
+
+      a {
+        color: blue;
+      }
+
+      /* Don't do this! */
+      margin: 0px auto;
+    }
+
+### Multiple selectors
+
+Each selector of a single set of rules should appear on its own line.
+
+    p.big,
+    h1,
+    span.important {
+      font-size: 5rem;
+    }
+
+The last selector begins the first bracket of the rule set.
+
+### Ordering
+
+Inside the brackets, declarations should appear as such:
+
+    .selector {
+      /* Scoped variables */
+
+      /* Regular attributes for .selector */
+
+      /* Subselectors */
+
+      /* Appended selectors */
+
+      /* Media Queries */
+    }
+
+See the example at the beginning of this section.
+
+Each group requires a carriage return except the last to appear.
+
+So this requires no carriage return:
+
+    .selector {
+      display: block;
+    }
+
+Because `display: block` is last. However, if we add another group,
+
+    .selector {
+      display: block;
+
+      &:before {
+        ...
+      }
+    }
+
+`display:block` gets a carriage return, but not `&:before`.
+
+#### Scoped variables
+
+Are variables that can only be read within this ruleset.
+
+#### Regular attributes
+
+Are simply css attributes for the selector like
+
+    display: block;
+
+#### Subselectors
+
+Are child selectors for the current selector. This does not include `&`-appended selectors
+as these are not children (or in the case of pseudo elements) do not describe an independent
+element.
+
+#### Appended selectors
+
+Are either child selectors or pseudo elements like `::before`.
+
+#### Media queries
+
+Are media queries for the current selector.
+
 # Credits
 
 [@coreyti](https://github.com/coreyti) for his work on [Emerson](https://github.com/GetEmerson/emerson-rb). The data-attribute selection strategy of the selectors is heavily based on his work.
