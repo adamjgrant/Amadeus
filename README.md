@@ -29,6 +29,14 @@
       - [Element](#element)
   - [Formatting](#formatting)
     - [Example](#example)
+    - [Nesting rules](#nesting-rules)
+    - [Multiple selectors](#multiple-selectors)
+    - [Ordering](#ordering)
+      - [Scoped variables](#scoped-variables)
+      - [Regular attributes](#regular-attributes)
+      - [Subselectors](#subselectors)
+      - [Appended selectors](#appended-selectors)
+      - [Media queries](#media-queries)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
