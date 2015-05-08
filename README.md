@@ -19,6 +19,14 @@
     - [Duplicate properties](#duplicate-properties)
       - [Separate properties](#separate-properties)
       - [Properties with identical prefixes](#properties-with-identical-prefixes)
+  - [Selectors](#selectors)
+    - [Why replace BEM?](#why-replace-bem)
+    - [What does it do?](#what-does-it-do)
+    - [How to use](#how-to-use)
+      - [Controller/Action](#controlleraction)
+      - [Component](#component)
+      - [Element](#element)
+- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
