@@ -198,7 +198,7 @@ CSS attributes.
 For this, we use the same `--` prefix to indicate a real css property and 
 simply concatenate the other with another `--`.
 
-    $square--width-height: 50px;
+    $square--width--height: 50px;
 
     .square {
       width: $square--width--height;
