@@ -262,7 +262,7 @@ Our variables then become:
 
 Amadeus selectors seek to replace BEM to empower preprocessors and cleaner HTML.
 
-### Why replace BEM?
+## Why replace BEM?
 
 [BEM](https://en.bem.info/method/) is a good naming strategy for a younger world of web development.
 In this world, CSS preprocessors were not nearly as powerful or widely implemented and JavaScript libraries were not as component-sophisticaed as they are today.
