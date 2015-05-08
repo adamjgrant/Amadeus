@@ -193,7 +193,7 @@ CSS attributes.
       height: 50px
     }
 
-### Separate properties
+#### Separate properties
 
 For this, we use the same `--` prefix to indicate a real css property and 
 simply concatenate the other with another `--`.
@@ -205,7 +205,7 @@ simply concatenate the other with another `--`.
       height: $square--width--height;
     }
 
-### Properties with identical prefixes
+#### Properties with identical prefixes
 
 Other properties only differ by their directionality suffix like `padding-top` and
 `padding-bottom`. Conveniently, these are both individual properties for another real
