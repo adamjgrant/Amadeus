@@ -260,6 +260,8 @@ Our variables then become:
     
 # Selectors
 
+Based on [Scoped Components](https://gist.github.com/adamjgrant/599530dab67db17c5b2d)
+
 Amadeus selectors seek to replace BEM to empower preprocessors and cleaner HTML.
 
 ## Why replace BEM?
