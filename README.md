@@ -267,7 +267,7 @@ Amadeus selectors seek to replace BEM to empower preprocessors and cleaner HTML.
 ## Why replace BEM?
 
 [BEM](https://en.bem.info/method/) is a good naming strategy for a younger world of web development.
-In this world, CSS preprocessors were not nearly as powerful or widely implemented and JavaScript libraries were not as component-more-smarterer as they are today.
+In this world, CSS preprocessors were not nearly as powerful or widely implemented and JavaScript libraries were not as component-sophisticated as they are today.
 
 This is not just about CSS classes, but CSS selectors in general. It is designed for use with robust backend frameworks and DOM-building JavaScript libraries like **React**
 
