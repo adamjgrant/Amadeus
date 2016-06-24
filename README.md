@@ -54,7 +54,7 @@ This documentation uses the Sass syntax, however these conventions are compatibl
 
 ## How it works
 
-Let's star with some easy stuff. Let's set a red color that is closer to our site's branding than default red.
+Let's start with some easy stuff. Let's set a red color that is closer to our site's branding than default red.
 
     $RED: rgb(248, 240, 255)
     
